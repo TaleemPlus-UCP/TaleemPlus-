@@ -93,19 +93,25 @@ class _SplashScreenState extends State<SplashScreen>
     return Scaffold(
       body: Stack(
         children: [
-          // Gradient Background
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  const Color(0xFF004D4D), // Deep teal
-                  const Color(0xFF006D6F), // Mid teal
-                  const Color(0xFF008080), // Bright teal
-                  const Color(0xFF004D4D), // Back to deep teal
-                ],
-                stops: const [0.0, 0.3, 0.7, 1.0],
+          // Background Image
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/background.png',
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF004D4D),
+                      Color(0xFF006D6F),
+                      Color(0xFF008080),
+                      Color(0xFF004D4D),
+                    ],
+                    stops: [0.0, 0.3, 0.7, 1.0],
+                  ),
+                ),
               ),
             ),
           ),
@@ -215,11 +221,16 @@ class _SplashScreenState extends State<SplashScreen>
               ),
             ],
           ),
-          child: const Center(
-            child: Icon(
-              Icons.menu_book_rounded,
-              size: 70,
-              color: Colors.white,
+          child: Center(
+            child: Image.asset(
+              'assets/images/logo.png',
+              width: 80,
+              height: 80,
+              errorBuilder: (context, error, stackTrace) => const Icon(
+                Icons.menu_book_rounded,
+                size: 70,
+                color: Colors.white,
+              ),
             ),
           ),
         ),

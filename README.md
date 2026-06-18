@@ -14,6 +14,12 @@
 - **Modern Aesthetic**: Deep teal theme with cyan glow effects and smooth transitions.
 - **Fully Offline**: Designed to work in environments with limited connectivity.
 
+## 📁 Project Structure
+
+- **`assets/images/`**: Contains custom branding assets:
+  - `logo.png`: Procedurally generated futuristic academy logo.
+  - `background.png`: Custom teal gradient background.
+
 ## 🚀 Getting Started
 
 ### Prerequisites

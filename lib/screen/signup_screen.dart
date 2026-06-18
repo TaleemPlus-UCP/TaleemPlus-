@@ -110,19 +110,25 @@ class _SignUpScreenState extends State<SignUpScreen>
     return Scaffold(
       body: Stack(
         children: [
-          // Gradient Background
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  const Color(0xFF004D4D),
-                  const Color(0xFF006D6F),
-                  const Color(0xFF008080),
-                  const Color(0xFF004D4D),
-                ],
-                stops: const [0.0, 0.3, 0.7, 1.0],
+          // Background Image
+          Positioned.fill(
+            child: Image.asset(
+              'assets/images/background.png',
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF004D4D),
+                      Color(0xFF006D6F),
+                      Color(0xFF008080),
+                      Color(0xFF004D4D),
+                    ],
+                    stops: [0.0, 0.3, 0.7, 1.0],
+                  ),
+                ),
               ),
             ),
           ),
