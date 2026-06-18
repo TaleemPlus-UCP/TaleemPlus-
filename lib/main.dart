@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taleemplus/screen/splash_screen.dart';
-import 'package:taleemplus/screen/login_screen.dart';
-import 'package:taleemplus/screen/signup_screen.dart';
+import 'package:taleemplus/views/auth/splash_screen.dart';
+import 'package:taleemplus/views/auth/login_screen.dart';
+import 'package:taleemplus/views/auth/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
